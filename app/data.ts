@@ -1,14 +1,18 @@
 type Project = {
+  link?: string
   name: string
   description: string
-  link: string
-  video: string
+  technologies?: string[]
+  github?: string
+  image?: string
+  video?: string
   id: string
 }
 
 type WorkExperience = {
   company: string
   title: string
+  status: string
   start: string
   end: string
   link: string
@@ -29,28 +33,38 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-    id: 'project1',
+    id: "suarakatrip",
+    link: "https://www.suarakatrip.com",
+    name: "Suarakatrip",
+    description: "Suaraka Trip is a tour and travel agency ready to take you to explore Indonesia’s top destinations with authentic experiences and professional service. Based on sustainable tourism values, we are committed to providing memorable journeys that also have a positive impact on the environment and local communities.",
+    // technologies: Laravel, MySQL, Redis, Next JS, Tailwind CSS.
+    technologies: ['Laravel', 'MySQL', 'Redis', 'Next.js', 'Tailwind CSS'],
+    image: "images/projects/suarakatrip.png",
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-    id: 'project2',
+    id: "multi-warehouse",
+    github: "https://github.com/muhammadaskar/warehouse-commerce",
+    name: "Multi Warehouse",
+    description: "A multi-warehouse e-commerce platform that allows users to purchase products from multiple warehouses. The platform is designed to provide a seamless shopping experience, with a focus on quality products and customer satisfaction.",
+    // Java, Spring, Kafka, Kong API Gateway, PostgreSQL, Redis, Next JS, Tailwind CSS.
+    technologies: ['Java', 'Spring', 'Kafka', 'Kong API Gateway', 'PostgreSQL', 'Redis', 'Next.js', 'Tailwind CSS'],
   },
+  {
+    id: "ngegame-store",
+    link: "https://www.store.ngegame.net",
+    name: "Ngegame Store",
+    description: "Ngegame Store is an online platform that allows users to purchase game credits and digital products. The platform is designed to provide a seamless shopping experience, with a focus on quality products and customer satisfaction.",
+    // Golang, MySQL, Docker, Redis, Next JS, Tailwind CSS.
+    technologies: ['Golang', 'MySQL', 'Docker', 'Redis', 'Next.js', 'Tailwind CSS'],
+    image: "images/projects/ngegame-store.png",
+  }
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Mbizmarket.co.id',
     title: 'Software Engineer',
+    status: 'Fulltime',
     start: '2023',
     end: 'Present',
     link: 'https://www.mbizmarket.co.id',
@@ -59,6 +73,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'BPJS Ketenagakerjaan',
     title: 'Software Engineer',
+    status: 'Fulltime',
     start: '2022',
     end: '2023',
     link: 'https://www.bpjsketenagakerjaan.go.id',

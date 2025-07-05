@@ -18,6 +18,7 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  PROJECTS,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -137,39 +138,10 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            I am excited to contribute to meaningful projects and collaborate with talented individuals. Feel free to explore my projects to see some of my past work and don't hesitate to reach out if you have any questions or potential collaboration opportunities!
+            Hello there! I'm a passionate developer with a keen interest in creating innovative solutions. I love exploring new technologies and pushing the boundaries of what's possible. Let's connect and collaborate on something amazing!
           </p>
         </div>
       </motion.section>
-
-      {/* <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
-              <div className="px-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.section> */}
 
       <motion.section
         variants={VARIANTS_SECTION}
@@ -192,11 +164,11 @@ export default function Personal() {
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between">
                   <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {job.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
+                    <h4 className="text-zinc-500 dark:text-zinc-400">
                       {job.company}
+                    </h4>
+                    <p className="font-normal dark:text-zinc-100">
+                      {job.title} - <span className="text-zinc-500 dark:text-zinc-400">{job.status}</span>
                     </p>
                   </div>
                   <p className="text-zinc-600 dark:text-zinc-400">
@@ -206,6 +178,103 @@ export default function Personal() {
               </div>
             </a>
           ))}
+        </div>
+      </motion.section>
+
+      {/* service provided */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Services Provided</h3>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          I specialize in building exceptional digital experiences, focusing on user-centric design and seamless functionality. My
+          expertise includes front-end development, UI/UX design, and responsive web applications. I am passionate about creating solutions that not only meet client needs but also delight users.
+        </p>
+
+        <div className="mt-5 flex md:flex-row flex-col md:items-center justify-start space-x-3 md:space-x-6 md:space-y-0 space-y-3">
+          <h5>Consulting</h5>
+          <h5>Software Architecture</h5>
+          <h5>Web/App Development</h5>
+          <h5>API Integration</h5>
+          <h5>Machine Learning</h5>
+          <h5>Web Scraping</h5>
+        </div>
+      </motion.section>
+
+      {/* Latest Project */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Latest Project</h3>
+        <div className="flex flex-col space-y-2">
+          {PROJECTS.map((project) => (
+            <AnimatedBackground
+              enableHover
+              className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80 border dark:border-zinc-800"
+              transition={{
+                type: 'spring',
+                bounce: 0,
+                duration: 0.2,
+              }}
+              key={project.id}
+            >
+              <Link
+                className="-mx-3 rounded-xl px-3 py-3 border-1 dark:border-zinc-800"
+                href={project.link || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-id="latest-project"
+              >
+                <div className="flex flex-col space-y-1">
+                  <h4 className="font-normal dark:text-zinc-100">
+                    {project.name}
+                  </h4>
+                  {
+                    project.github && (
+                      <div className="flex items-center space-x-2">
+                        <a
+                          href={project.github || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center space-x-2 rounded-md bg-zinc-900 dark:bg-zinc-100 px-4 py-2 text-sm font-medium text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
+                        >
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                          </svg>
+                          <span>View on GitHub</span>
+                        </a>
+                      </div>
+                    )
+                  }
+                  <p className="text-zinc-500 dark:text-zinc-400">
+                    {project.description}
+                  </p>
+                  <p className="text-zinc-500 dark:text-zinc-400">
+                    <span className="font-semibold">Technologies:</span> {project.technologies?.join(', ')}
+                  </p>
+                  {
+                    project.image && (
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="mt-2 md:h-80 h-60 w-full rounded-lg object-fill grayscale hover:grayscale-0 transition-all duration-300"
+                      />
+                    )
+                  }
+                </div>
+              </Link>
+            </AnimatedBackground>
+          ))
+
+          }
         </div>
       </motion.section>
 
