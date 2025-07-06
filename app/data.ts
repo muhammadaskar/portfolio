@@ -129,7 +129,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   // },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/muhammad-askarrr',
+    link: 'https://www.linkedin.com/in/muhammad-askarrr/',
   },
   {
     label: 'Instagram',
