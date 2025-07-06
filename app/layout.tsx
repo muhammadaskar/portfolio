@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Muhammad Askar'
   },
   description: 'Muhammad Askar is a Software Engineer specializing in building exceptional digital experiences.',
+  keywords: ['Muhammad Askar', 'Software Engineer', 'Web Developer', 'Full Stack Developer'],
 };
 
 const geist = Geist({
