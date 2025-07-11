@@ -57,6 +57,15 @@ export const PROJECTS: Project[] = [
     // Golang, MySQL, Docker, Redis, Next JS, Tailwind CSS.
     technologies: ['Golang', 'MySQL', 'Docker', 'Redis', 'Next.js', 'Tailwind CSS'],
     image: "images/projects/ngegame-store.png",
+  },
+  {
+    id: "ladang-bumi",
+    link: "https://ladang-bumi.vercel.app",
+    name: "Ladang Bumi",
+    description: "Ladang Bumi is a platform that connects farmers with consumers, providing fresh and organic produce directly from the farm. The platform is designed to promote sustainable agriculture and support local farmers.",
+    // Laravel, MySQL, Redis, Next JS, Tailwind CSS.
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: "images/projects/ladang-bumi.png",
   }
 ]
 
