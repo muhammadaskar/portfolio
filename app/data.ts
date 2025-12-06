@@ -33,6 +33,15 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "telekuy",
+    link: "https://www.telekuy.com",
+    name: "Telekuy",
+    description: "Telekuy is an marketplace platform for telegram account. Users can buy and sell telegram accounts with ease and security. Telekuy provides a wide range of telegram accounts with various niches and followers. Users can be deposit using cryptocurrency or bank transfer.",
+    // technologies: Go, MySQL, Redis, Next JS, Tailwind CSS.
+    technologies: ['Go', 'Python', 'PostgreSQL', 'MongoDB', 'Redis', 'Next.js', 'Tailwind CSS', 'Cryptocurrency'],
+    image: "images/projects/telekuy.png",
+  },
+  {
     id: "suarakatrip",
     link: "https://www.suarakatrip.com",
     name: "Suarakatrip",
