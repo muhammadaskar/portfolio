@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     description: "Telekuy is an marketplace platform for telegram account. Users can buy and sell telegram accounts with ease and security. Telekuy provides a wide range of telegram accounts with various niches and followers. Users can be deposit using cryptocurrency or bank transfer.",
     // technologies: Go, MySQL, Redis, Next JS, Tailwind CSS.
     technologies: ['Go', 'Python', 'PostgreSQL', 'MongoDB', 'Redis', 'Next.js', 'Tailwind CSS', 'Cryptocurrency'],
-    image: "images/projects/telekuy.png",
+    image: "/images/projects/telekuy.png",
   },
   {
     id: "suarakatrip",
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     description: "Suaraka Trip is a tour and travel agency ready to take you to explore Indonesia’s top destinations with authentic experiences and professional service. Based on sustainable tourism values, we are committed to providing memorable journeys that also have a positive impact on the environment and local communities.",
     // technologies: Laravel, MySQL, Redis, Next JS, Tailwind CSS.
     technologies: ['Laravel', 'MySQL', 'Redis', 'Next.js', 'Tailwind CSS'],
-    image: "images/projects/suarakatrip.png",
+    image: "/images/projects/suarakatrip.png",
   },
   {
     id: "multi-warehouse",
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
     description: "Ngegame Store is an online platform that allows users to purchase game credits and digital products. The platform is designed to provide a seamless shopping experience, with a focus on quality products and customer satisfaction.",
     // Golang, MySQL, Docker, Redis, Next JS, Tailwind CSS.
     technologies: ['Golang', 'MySQL', 'Docker', 'Redis', 'Next.js', 'Tailwind CSS'],
-    image: "images/projects/ngegame-store.png",
+    image: "/images/projects/ngegame-store.png",
   },
   {
     id: "ladang-bumi",
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     description: "Ladang Bumi is a platform that connects farmers with consumers, providing fresh and organic produce directly from the farm. The platform is designed to promote sustainable agriculture and support local farmers.",
     // Laravel, MySQL, Redis, Next JS, Tailwind CSS.
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    image: "images/projects/ladang-bumi.png",
+    image: "/images/projects/ladang-bumi.png",
   }
 ]
 
