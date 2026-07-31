@@ -139,7 +139,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400 text-justify">
-            Hello there! I'm a passionate developer with Software Engineering background, Interested in Tech especially Software Engineering and Coffe lovers. I have a strong foundation in software development, with a focus on creating efficient and scalable solutions. My expertise lies in building exceptional digital experiences, focusing on user-centric design and seamless functionality.
+            Hello there! I'm a passionate developer with Software Engineering background, Interested in Tech especially Software Engineering and Coffee lovers. I have a strong foundation in software development, with a focus on creating efficient and scalable solutions. My expertise lies in building exceptional digital experiences, focusing on user-centric design and seamless functionality.
           </p>
         </div>
       </motion.section>
@@ -221,16 +221,20 @@ export default function Personal() {
               }}
               key={project.id}
             >
-              <Link
+              {/* ponytail: plain div wrapper — an <a> inside an <a> is invalid HTML and broke hydration */}
+              <div
                 className="-mx-3 rounded-xl px-3 py-3 border-1 dark:border-zinc-800"
-                href={project.link || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
                 data-id="latest-project"
               >
                 <div className="flex flex-col space-y-1">
                   <h4 className="font-normal dark:text-zinc-100">
-                    {project.name}
+                    <Link
+                      href={project.link || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.name}
+                    </Link>
                   </h4>
                   {
                     project.github && (
@@ -271,7 +275,7 @@ export default function Personal() {
                     )
                   }
                 </div>
-              </Link>
+              </div>
             </AnimatedBackground>
           ))
 

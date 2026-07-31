@@ -12,9 +12,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://muhammadaskar.tech/'),
+  metadataBase: new URL('https://muhammadaskar.me/'),
   alternates: {
-    canonical: 'https://muhammadaskar.tech/'
+    canonical: 'https://muhammadaskar.me/'
   },
   title: {
     default: 'Muhammad Askar - Software Engineer',
