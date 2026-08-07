@@ -41,11 +41,8 @@ const SERVICES = [
 
 const SKILLS = [...new Set(PROJECTS.flatMap((p) => p.technologies ?? []))]
 
-const STATS = [
-  { value: `${new Date().getFullYear() - 2022}+`, label: 'Years building' },
-  { value: `${PROJECTS.length}`, label: 'Shipped projects' },
-  { value: `${WORK_EXPERIENCE.length}`, label: 'Companies' },
-]
+const CAREER_START_YEAR = 2022
+const YEARS_OF_EXPERIENCE = new Date().getFullYear() - CAREER_START_YEAR
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
@@ -75,18 +72,6 @@ export default function Personal() {
         className="pt-6"
       >
         <div className="flex flex-col items-start gap-6">
-          <div className="relative">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-indigo-500 via-fuchsia-500 to-cyan-400 opacity-70 blur-sm" />
-            <Image
-              src="/askar.png"
-              alt="Muhammad Askar"
-              width={88}
-              height={88}
-              priority
-              className="relative h-22 w-22 rounded-full object-cover ring-2 ring-white dark:ring-zinc-950"
-            />
-          </div>
-
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
@@ -111,9 +96,7 @@ export default function Personal() {
               delay={0.3}
               className="mt-6 max-w-xl text-lg text-zinc-600 dark:text-zinc-400"
             >
-              Hi, I&apos;m Muhammad Askar. I design and build scalable backends
-              and polished interfaces — from marketplaces and payment flows to
-              data pipelines. Coffee-powered, detail-obsessed.
+              {`Hi, I'm Muhammad Askar. For over ${YEARS_OF_EXPERIENCE} years I've designed and built scalable backends and polished interfaces — from marketplaces and payment flows to data pipelines. Coffee-powered, detail-obsessed.`}
             </TextEffect>
           </div>
 
@@ -137,23 +120,6 @@ export default function Personal() {
               </Link>
             </Magnetic>
           </div>
-
-          <dl className="mt-4 grid w-full grid-cols-3 gap-3">
-            {STATS.map((stat) => (
-              <div
-                key={stat.label}
-                className="glass rounded-2xl px-4 py-4 text-center"
-              >
-                <dt className="sr-only">{stat.label}</dt>
-                <dd>
-                  <span className="block text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-                    {stat.value}
-                  </span>
-                  <span className="text-xs text-zinc-500">{stat.label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </motion.section>
 
